@@ -1,113 +1,191 @@
-import Image from 'next/image'
+'use client';
+import Career from '@/components/career';
+import Footer from '@/components/footer';
+import Form from '@/components/form';
+import Header from '@/components/header';
+import Projects from '@/components/projects';
+import Skills from '@/components/skills';
+import Social from '@/components/social';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [isStatic, setIsStatic] = useState(true);
+
+  useEffect(() => {setIsStatic(true)}, []);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <Header />
+      <main className="flex min-h-screen flex-col items-center justify-start pt-20 px-6 bg-white">
+        <Social />
+        <section
+          id="about"
+          className="flex items-center justify-center gap-10 w-full mb-8"
+        >
+          <Image
+            src='/images/profile_image.jpeg'
+            alt="Renan Saldanha"
+            width={200}
+            height={200}
+            className="rounded-full"
+          />
+          <motion.div
+            className="p-3 rounded-md shadow-about w-[40%]"
+            initial="hidden"
+              whileInView="visible"
+              transition={{duration: 1}}
+              viewport={{once: true, amount: "some"}}
+              variants={{
+                hidden: {opacity: 0, y:-50},
+                visible: {opacity: 1, y:0}
+              }}
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+            <h2
+              className="text-2xl font-bold mb-2 text-primary-color"
+            >
+              About
+            </h2>
+            <p
+              className="text-black py-2 leading-7"
+            >
+              Greetings! 🚀 I&apos;m a tech explorer armed with a degree from the Federal University of Ouro Preto. 
+              With 3 years of coding magic, I&apos;m here to craft web wonders and cloud solutions. 
+              React, TypeScript, .NET C# – I&apos;m fluent in the languages of innovation!
+            </p>
+          </motion.div>
+        </section>
+            
+        <section
+          id="more-about"
+          className="bg-bg-color px-20 py-4 w-full"
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+            <h2
+              className="text-2xl font-bold text-primary-color mb-2 text-center"
+            >
+              More About Me
+            </h2>
+            <motion.p
+              className='text-black p-2 leading-7 text-justify'
+              initial="hidden"
+              whileInView="visible"
+              transition={{duration: 1}}
+              viewport={{once: true, amount: "some"}}
+              variants={{
+                hidden: {opacity: 0, x:-10},
+                visible: {opacity: 1, x:0}
+              }}
+            >
+              Greetings from the digital realm! 🚀 Armed with a degree from the Federal University of Ouro Preto, 
+              I&apos;m a curious coder with 3 years of experience weaving tech tales. 
+              Full-stack development, cloud solutions, and unraveling coding enigmas are my domains of exploration.
+            </motion.p>
+            <motion.p
+              className='text-black p-2 leading-7 text-justify'
+              initial="hidden"
+              whileInView="visible"
+              transition={{duration: 1}}
+              viewport={{once: true, amount: "some"}}
+              variants={{
+                hidden: {opacity: 0, x:10},
+                visible: {opacity: 1, x:0}
+              }}
+            >
+              When I&apos;m not decrypting the binary riddles, you&apos;ll find me strolling along the beach, 
+              humming in harmony with melodies, and conquering virtual and analog realms. 
+              I&apos;m a coding explorer with a palate for diverse cuisines and an eye for innovative solutions.
+            </motion.p>
+            <motion.p
+              className='text-black p-2 leading-7 text-justify'
+              initial="hidden"
+              whileInView="visible"
+              transition={{duration: 1}}
+              viewport={{once: true, amount: "some"}}
+              variants={{
+                hidden: {opacity: 0, x:-10},
+                visible: {opacity: 1, x:0}
+              }}
+            >
+              From React to TypeScript, I dance through languages like a tech tango enthusiast. Just like a cloud chaser, 
+              I&apos;ve honed my skills in the art of Azure and AWS architecture.
+            </motion.p>
+            <motion.p
+              className='text-black p-2 leading-7 text-justify'
+              initial="hidden"
+              whileInView="visible"
+              transition={{duration: 1}}
+              viewport={{once: true, amount: "some"}}
+              variants={{
+                hidden: {opacity: 0, x:10},
+                visible: {opacity: 1, x:0}
+              }}
+            >
+              My motto? &ldquo;Problem-solving is my playground!&rdquo; 
+              I collaborate closely with clients and stakeholders, crafting solutions that align seamlessly with aspirations.
+            </motion.p>
+            <motion.p
+              className='text-black p-2 leading-7 text-justify'
+              initial="hidden"
+              whileInView="visible"
+              transition={{duration: 1}}
+              viewport={{once: true, amount: "some"}}
+              variants={{
+                hidden: {opacity: 0, x:-10},
+                visible: {opacity: 1, x:0}
+              }}
+            >
+              So, whether it&apos;s lines of code or footprints in the sand, I&apos;m ready to embark on an adventure 
+              of co-creation. If you&apos;re up for a chat that&apos;s a blend of innovation and camaraderie, 
+              let&apos;s connect and embark on this coding journey together! 🌟🌊🎶
+            </motion.p>
+          </section>
+          <section
+            id="skills"
+            className='bg-bg-color w-full py-6 px-20'
+          >
+            <h2
+              className="text-2xl font-bold text-primary-color mb-2 text-center"
+            >
+              Skills
+            </h2>
+            <Skills />
+          </section>
+          <section
+            id="career"
+            className='bg-bg-color w-full py-6 px-20'
+          >
+            <h2
+              className="text-2xl font-bold text-primary-color mb-2 text-center"
+            >
+              Career
+            </h2>
+            <Career />
+          </section>
+          <section
+            id="projects"
+            className='bg-bg-color w-full py-6 px-20'
+          >
+            <h2
+              className="text-2xl font-bold text-primary-color mb-6 text-center"
+            >
+              Projects
+            </h2>
+            <Projects />
+          </section>
+          <section
+            id="contact"
+            className='bg-bg-color w-full pt-6 px-20'
+          >
+            <h2
+              className="text-2xl font-bold text-primary-color mb-6 text-center"
+            >
+              Get in Touch With Me
+            </h2>
+            <Form />
+          </section>
+      </main>
+      <Footer/>
+    </>
   )
 }
