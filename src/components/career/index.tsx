@@ -41,7 +41,7 @@ const Career = (props: Props) => {
         <h3 className='color-black font-semibold mt-4 mb-4'>
           Clients and Projects
         </h3>
-        <div className='grid lg:grid-cols-3 sm:grid-cols-1 gap-4 w-full'>
+        <div className='grid md:grid-cols-3 grid-cols-1 gap-4 w-full'>
           <motion.div 
             className='gap-8 flex flex-col justify-start items-center border-2 border-primary-shadow p-2 rounded-sm'
             initial="hidden"

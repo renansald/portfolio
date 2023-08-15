@@ -1,7 +1,14 @@
+import { useState } from "react";
+
 const Header = () => {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const anchorStyle = `text-primary-color transition duration-300 ease-in-out cursor-pointer
     hover:text-secondary-color hover:border-b-2 hover:border-solid hover:border-secondary-color`;
+  
+  const barsStyle = `w-[25px] h-[3px] bg-primary-color transition duration-300 ease-in-out 
+    mt-[3px] mb-[3px]`;
 
     const handleNavigationClick = (event : React.MouseEvent<HTMLAnchorElement>, offset: number) => {
       event.preventDefault();
@@ -26,45 +33,64 @@ const Header = () => {
       >
         Renan Saldanha
       </h1>
-      <div
-        className='flex justify-between items-center gap-4'
-      >
-        <a
+      <nav className="flex justify-between items-center bg-bg-color w-fit">
+        <button 
+          className={`md:hidden flex-col cursor-pointer flex hover:shadow-3x5 border-2 rounded-md p-2 
+            ${isMenuOpen ? 'border-secondary-color' : 'border-primary-color'} hover:border-secondary-color hover:shadow-skill-card`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+            <div className={barsStyle}></div>
+            <div className={barsStyle}></div>
+            <div className={barsStyle}></div>
+        </button>
+      <ul className={`md:flex md:flex-row md:relative md:top-0 md:border-0 md:right-0 md:p-0 md:shadow-none border-2 rounded-sm p-4 border-primary-color list-none ${isMenuOpen ? '' : 'hidden'} flex-col absolute top-[80px] right-[2.25rem] md:w-full text-center bg-bg-color shadow-about`}>
+        <li className="mr-[20px]">
+          <a
           className={anchorStyle}
           href="#about"
-          onClick={(event) => handleNavigationClick(event, 80)}
+          onClick={(event) => handleNavigationClick(event, 90)}
         >
           About
         </a>
+        </li>
+        <li className="mr-[20px]">
         <a
           className={anchorStyle}
           href="#skills"
-          onClick={(event) => handleNavigationClick(event, 40)}
+          onClick={(event) => handleNavigationClick(event, 50)}
         >
           Skills
         </a>
+        </li>
+        <li className="mr-[20px]">
         <a
           className={anchorStyle}
           href="#career"
-          onClick={(event) => handleNavigationClick(event, 40)}
+          onClick={(event) => handleNavigationClick(event, 50)}
         >
           Career
         </a>
+        </li>
+        <li className="mr-[20px]">
         <a
           className={anchorStyle}
           href="#projects"
-          onClick={(event) => handleNavigationClick(event, 40)}
+          onClick={(event) => handleNavigationClick(event, 50)}
         >
           Projects
         </a>
+        </li>
+        <li className="mr-[20px]">
         <a
           className={anchorStyle}
           href="#contact"
-          onClick={(event) => handleNavigationClick(event, 40)}
+          onClick={(event) => handleNavigationClick(event, 50)}
         >
           Contact
         </a>
-      </div>
+        </li>
+      </ul>
+      </nav>
     </div>
   )
 }

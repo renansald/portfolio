@@ -15,7 +15,7 @@ const Projects = (props: Props) => {
   const descriptionStyle = `text-black text-justify`;
 
   return (
-    <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-6">
+    <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
       <motion.div 
         className={itemsStyle}
         initial="hidden"

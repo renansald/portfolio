@@ -7,7 +7,7 @@ const Form = (props: Props) => {
     <form
     action="https://formspree.io/f/xbjvgpog" 
     method="POST"
-    className="flex flex-col gap-4 lg:w-[40%] sm:w-full border-2 border-solid border-primary-color rounded-md p-3 shadow-about"
+    className="flex flex-col gap-4 md:w-[40%] w-full border-2 border-solid border-primary-color rounded-md p-3 shadow-about"
     >
       <label 
         htmlFor="name"

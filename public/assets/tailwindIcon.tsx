@@ -21,12 +21,12 @@ const TailwindIcon = ({className}: Props) => {
         >
           <stop 
             offset="0" 
-            stop-color="#2298bd"
+            stopColor="#2298bd"
           >
           </stop>
           <stop 
             offset="1" 
-            stop-color="#0ed7b5"
+            stopColor="#0ed7b5"
           >
           </stop>
         </linearGradient>

@@ -19,14 +19,14 @@ import TypescriptIcon from '../../../public/assets/typescriptIcon';
 type Props = {}
 
 const Skills = (props: Props) => {
-  const classIcon = "lg:w-[20%] sm:w-[100%]"
+  const classIcon = "md:w-[100px] md:h-[100px] h-[40px] w-[40px]"
   const classSection = "bg-bg-color flex flex-col justify-center items-center gap-1 p-2 w-full"
   const classIconCard = `flex flex-wrap justify-center items-center gap-4 
   bg-white rounded-md p-8 m-4 shadow-skill-card hover:shadow-about`
 
   return (
     <div
-      className='grid lg:grid-cols-2 gap-1 w-full sm:grid-cols-1'
+      className='grid md:grid-cols-2 gap-1 w-full grid-cols-1'
     >
       <motion.div
         className={classSection}

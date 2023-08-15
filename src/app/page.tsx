@@ -18,11 +18,11 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen flex-col items-center justify-start pt-20 px-6 bg-white">
+      <main className="flex min-h-screen flex-col items-center justify-start pt-[7rem] px-6 bg-white">
         <Social />
         <section
           id="about"
-          className="flex items-center justify-center gap-10 w-full mb-8"
+          className="flex items-center justify-center px-12 md:px-16 gap-10 w-full mb-8 flex-col md:flex-row"
         >
           <Image
             src='/images/profile_image.jpeg'
@@ -32,7 +32,7 @@ export default function Home() {
             className="rounded-full"
           />
           <motion.div
-            className="p-3 rounded-md shadow-about w-[40%]"
+            className="p-3 rounded-md shadow-about md:w-[40%]"
             initial="hidden"
               whileInView="visible"
               transition={{duration: 1}}
@@ -59,7 +59,7 @@ export default function Home() {
             
         <section
           id="more-about"
-          className="bg-bg-color px-20 py-4 w-full"
+          className="bg-bg-color px-12 md:px-16 py-4 w-full"
         >
             <h2
               className="text-2xl font-bold text-primary-color mb-2 text-center"
@@ -142,7 +142,7 @@ export default function Home() {
           </section>
           <section
             id="skills"
-            className='bg-bg-color w-full py-6 px-20'
+            className='bg-bg-color w-full py-6 px-12 md:px-16'
           >
             <h2
               className="text-2xl font-bold text-primary-color mb-2 text-center"
@@ -153,7 +153,7 @@ export default function Home() {
           </section>
           <section
             id="career"
-            className='bg-bg-color w-full py-6 px-20'
+            className='bg-bg-color w-full py-6 px-12 md:px-16'
           >
             <h2
               className="text-2xl font-bold text-primary-color mb-2 text-center"
@@ -164,7 +164,7 @@ export default function Home() {
           </section>
           <section
             id="projects"
-            className='bg-bg-color w-full py-6 px-20'
+            className='bg-bg-color w-full py-6 px-12 md:px-16'
           >
             <h2
               className="text-2xl font-bold text-primary-color mb-6 text-center"
@@ -175,7 +175,7 @@ export default function Home() {
           </section>
           <section
             id="contact"
-            className='bg-bg-color w-full pt-6 px-20'
+            className='bg-bg-color w-full pt-6 px-12 md:px-16'
           >
             <h2
               className="text-2xl font-bold text-primary-color mb-6 text-center"

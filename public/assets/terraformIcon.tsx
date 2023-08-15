@@ -10,7 +10,7 @@ const TerraformIcon = ({className}: Props) => {
       className={className}  
     >
       <g 
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <path 
           d="M77.941 44.5v36.836L46.324 62.918V26.082zm0 0" 
