@@ -147,7 +147,7 @@ export default function Home() {
             <h2
               className="text-2xl font-bold text-primary-color mb-2 text-center"
             >
-              Skills
+              Technologies
             </h2>
             <Skills />
           </section>
