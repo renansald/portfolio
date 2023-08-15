@@ -26,11 +26,11 @@ stages:
         includeLatestTag: true
         useDefaultContext: false
         buildContext: .
-    -task: Docker@2
-      displayName: Push Docker image
-      condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
-      inputs:
-        containerRegistry: 'dockerHub-sc'
-        command: push
-        imageName: $(imageName)
-        includeLatestTag: true
+    - task: Docker@2
+        displayName: Push Docker image
+        condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
+        inputs:
+          containerRegistry: 'dockerHub-sc'
+          command: push
+          imageName: $(imageName)
+          includeLatestTag: true
