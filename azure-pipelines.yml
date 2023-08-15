@@ -28,3 +28,15 @@ stages:
         repository: $(imageName)
         command: buildAndPush
         tags: $(Build.BuildId)
+- stage: Deploy
+  displayName: Deploy Image
+  jobs:
+  - job: DeployOnAppService
+    displayName: Deploy Image on App Service
+    steps:
+    - task: AzureWebAppContainer@1
+      displayName: 'Azure Web App on Container Deploy'
+      inputs:
+        azureSubscription: azure-sc
+        appName: portfolioRenan
+        imageName: $(imageName):$(Build.BuildId)
