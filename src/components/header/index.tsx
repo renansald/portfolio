@@ -12,6 +12,7 @@ const Header = () => {
 
     const handleNavigationClick = (event : React.MouseEvent<HTMLAnchorElement>, offset: number) => {
       event.preventDefault();
+      setIsMenuOpen(false);
       const targetId = event.currentTarget.getAttribute('href');
       const target = document.querySelector(targetId?.toString() || '');
       if (target) {
