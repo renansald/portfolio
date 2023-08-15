@@ -17,19 +17,13 @@ stages:
     displayName: Build and push docker image
     steps:
     - task: Docker@2
-      displayName: Build Docker image
+      displayName: Login to Docker Hub
       inputs:
+        command: login
         containerRegistry: 'dockerHub-sc'
-        command: build
-        dockerfile: '**/Dockerfile'
-        imageName: $(imageName)
-        includeLatestTag: true
-        useDefaultContext: false
-        buildContext: .
     - task: Docker@2
-      displayName: Push Docker image
+      displayName: Build and push Docker image
       inputs:
         containerRegistry: 'dockerHub-sc'
-        command: push
-        imageName: $(imageName)
-        includeLatestTag: true
+        command: buildAndPush
+        tag: $(Build.BuildId)
