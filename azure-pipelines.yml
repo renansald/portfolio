@@ -13,7 +13,7 @@ stages:
 - stage: Build
   displayName: Build Image
   jobs:
-  - job: Docker Image
+  - job: BuildAndPushDockerImage
     displayName: Build and push docker image
     steps:
     - task: Docker@2
