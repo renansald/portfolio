@@ -18,6 +18,9 @@ export default function RootLayout({
     <html 
       lang="en"
     >
+      <head>
+        <link rel="icon" href='https://img.icons8.com/laces/64/code-folder.png' />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
