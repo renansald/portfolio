@@ -25,5 +25,6 @@ stages:
       displayName: Build and push Docker image
       inputs:
         containerRegistry: 'dockerHub-sc'
+        repository: $(imageName)
         command: buildAndPush
-        tag: $(Build.BuildId)
+        tags: $(Build.BuildId)
