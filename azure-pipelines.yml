@@ -7,7 +7,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  imageName: 'renansald/portfolio:$(Build.BuildId)'
+  imageName: 'renansald/portfolio'
 
 stages:
 - stage: Build
