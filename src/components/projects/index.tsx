@@ -12,7 +12,7 @@ const Projects = (props: Props) => {
   const itemsStyle = `flex flex-col items-center justify-center w-full gap-10 hover:border-primary-color
                       rounded-md shadow-skill-card border-2 border-solid border-secondary-shadow p-3`;
 
-  const descriptionStyle = `text-black text-justify`;
+  const descriptionStyle = `text-black text-justify dark:text-white`;
 
   return (
     <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
@@ -32,6 +32,7 @@ const Projects = (props: Props) => {
           alt='radar_viral'
           width={500}
           height={500}
+          className='border-2 border-primary-color rounded-sm'
         />
         <p className={descriptionStyle}>
           This marks my inaugural project, a collaborative effort among friends and me to create a system 
@@ -64,6 +65,7 @@ const Projects = (props: Props) => {
           alt='pokedex'
           width={500}
           height={500}
+          className='border-2 border-primary-color rounded-sm'
         />
         <p className={descriptionStyle}>
           Step into the enchanting world of our Pokedex project, where the realms 
@@ -96,6 +98,7 @@ const Projects = (props: Props) => {
           alt='gym'
           width={500}
           height={500}
+          className='border-2 border-primary-color rounded-sm'
         />
         <p className={descriptionStyle}>
           An interactive gym landing page where visitors can explore a world of 
@@ -128,6 +131,7 @@ const Projects = (props: Props) => {
           alt='netflix-clone'
           width={500}
           height={500}
+          className='border-2 border-primary-color rounded-sm'
         />
         <p className={descriptionStyle}>
           This project revolves around simulating a login page reminiscent of 

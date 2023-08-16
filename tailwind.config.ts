@@ -6,6 +6,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
@@ -24,7 +25,7 @@ const config: Config = {
         '3x5': '0 3px 5px rgba(0, 0, 0, 0.1)',
         'about': '0 2px 15px 2px #8b8eaf',
         'skill-card': '0 3px 10px #a17a69',
-        'footer': '0 0 16px #8b8eaf',
+        'dark-header': '0 3px 5px #8b8eaf',
       },
     },
   },

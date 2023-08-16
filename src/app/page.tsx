@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen flex-col items-center justify-start pt-[7rem] px-6 bg-white">
+      <main className="flex min-h-screen flex-col items-center justify-start pt-[7rem] px-6 mb-0 pb-4 bg-white dark:bg-black">
         <Social />
         <section
           id="about"
@@ -48,7 +48,7 @@ export default function Home() {
               About
             </h2>
             <p
-              className="text-black py-2 leading-7"
+              className="text-black py-2 leading-7 dark:text-white"
             >
               Greetings! 🚀 I&apos;m a tech explorer armed with a degree from the Federal University of Ouro Preto. 
               With 3 years of coding magic, I&apos;m here to craft web wonders and cloud solutions. 
@@ -59,7 +59,7 @@ export default function Home() {
             
         <section
           id="more-about"
-          className="bg-bg-color px-12 md:px-16 py-4 w-full"
+          className="bg-bg-color px-12 md:px-16 py-4 w-full dark:bg-slate-900"
         >
             <h2
               className="text-2xl font-bold text-primary-color mb-2 text-center"
@@ -67,7 +67,7 @@ export default function Home() {
               More About Me
             </h2>
             <motion.p
-              className='text-black p-2 leading-7 text-justify'
+              className='text-black p-2 leading-7 text-justify dark:text-white'
               initial="hidden"
               whileInView="visible"
               transition={{duration: 1}}
@@ -82,7 +82,7 @@ export default function Home() {
               Full-stack development, cloud solutions, and unraveling coding enigmas are my domains of exploration.
             </motion.p>
             <motion.p
-              className='text-black p-2 leading-7 text-justify'
+              className='text-black p-2 leading-7 text-justify dark:text-white'
               initial="hidden"
               whileInView="visible"
               transition={{duration: 1}}
@@ -97,35 +97,7 @@ export default function Home() {
               I&apos;m a coding explorer with a palate for diverse cuisines and an eye for innovative solutions.
             </motion.p>
             <motion.p
-              className='text-black p-2 leading-7 text-justify'
-              initial="hidden"
-              whileInView="visible"
-              transition={{duration: 1}}
-              viewport={{once: true, amount: "some"}}
-              variants={{
-                hidden: {opacity: 0, x:-10},
-                visible: {opacity: 1, x:0}
-              }}
-            >
-              From React to TypeScript, I dance through languages like a tech tango enthusiast. Just like a cloud chaser, 
-              I&apos;ve honed my skills in the art of Azure and AWS architecture.
-            </motion.p>
-            <motion.p
-              className='text-black p-2 leading-7 text-justify'
-              initial="hidden"
-              whileInView="visible"
-              transition={{duration: 1}}
-              viewport={{once: true, amount: "some"}}
-              variants={{
-                hidden: {opacity: 0, x:10},
-                visible: {opacity: 1, x:0}
-              }}
-            >
-              My motto? &ldquo;Problem-solving is my playground!&rdquo; 
-              I collaborate closely with clients and stakeholders, crafting solutions that align seamlessly with aspirations.
-            </motion.p>
-            <motion.p
-              className='text-black p-2 leading-7 text-justify'
+              className='text-black p-2 leading-7 text-justify dark:text-white'
               initial="hidden"
               whileInView="visible"
               transition={{duration: 1}}
@@ -142,7 +114,7 @@ export default function Home() {
           </section>
           <section
             id="skills"
-            className='bg-bg-color w-full py-6 px-12 md:px-16'
+            className='bg-bg-color w-full py-6 px-12 md:px-16 dark:bg-slate-900'
           >
             <h2
               className="text-2xl font-bold text-primary-color mb-2 text-center"
@@ -153,7 +125,7 @@ export default function Home() {
           </section>
           <section
             id="career"
-            className='bg-bg-color w-full py-6 px-12 md:px-16'
+            className='bg-bg-color w-full py-6 px-12 md:px-16 dark:bg-slate-900'
           >
             <h2
               className="text-2xl font-bold text-primary-color mb-2 text-center"
@@ -164,7 +136,7 @@ export default function Home() {
           </section>
           <section
             id="projects"
-            className='bg-bg-color w-full py-6 px-12 md:px-16'
+            className='bg-bg-color w-full py-6 px-12 md:px-16 dark:bg-slate-900'
           >
             <h2
               className="text-2xl font-bold text-primary-color mb-6 text-center"
@@ -175,7 +147,7 @@ export default function Home() {
           </section>
           <section
             id="contact"
-            className='bg-bg-color w-full pt-6 px-12 md:px-16'
+            className='bg-bg-color w-full pt-6 px-12 md:px-16 dark:bg-slate-900'
           >
             <h2
               className="text-2xl font-bold text-primary-color mb-6 text-center"

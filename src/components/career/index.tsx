@@ -6,7 +6,7 @@ type Props = {}
 const Career = (props: Props) => {
   return (
     <div 
-      className='bg-bg-color text-black text-justify'
+      className='bg-bg-color text-black dark:text-white text-justify dark:bg-slate-900'
     >
       <div 
         className='flex flex-col justify-center items-center mt-2'
@@ -19,7 +19,7 @@ const Career = (props: Props) => {
           width={50}
         />
         <h3
-          className='text-xl font-bold'
+          className='text-xl font-bold dark:text-white'
         >
           DTI Sistemas
         </h3>
@@ -86,7 +86,8 @@ const Career = (props: Props) => {
               </p>
           </motion.div>
           <motion.div 
-            className='gap-8 flex flex-col justify-start items-center border-2 border-primary-shadow p-2 rounded-sm'
+            className={`gap-8 flex flex-col justify-start items-center border-2 
+              border-primary-shadow p-2 rounded-sm`}
             initial="hidden"
             whileInView="visible"
             transition={{duration: 1}}

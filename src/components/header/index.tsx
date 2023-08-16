@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ModeToggle from "../modeToggle";
 
 const Header = () => {
 
@@ -26,15 +27,15 @@ const Header = () => {
   
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 bg-bg-color flex flex-row 
-          justify-between items-center px-6 py-4 shadow-3x5`}
+      className={`fixed top-0 left-0 w-full z-50 bg-bg-color flex flex-row  dark:shadow-dark-header
+          justify-between items-center px-6 py-4 shadow-3x5 dark:bg-slate-900`}
     >
       <h1
         className='text-primary-color text-2xl font-bold'
       >
         Renan Saldanha
       </h1>
-      <nav className="flex justify-between items-center bg-bg-color w-fit">
+      <nav className="flex justify-between items-center bg-bg-color dark:bg-slate-900 w-fit">
         <button 
           className={`md:hidden flex-col cursor-pointer flex hover:shadow-3x5 border-2 rounded-md p-2 
             ${isMenuOpen ? 'border-secondary-color' : 'border-primary-color'} hover:border-secondary-color hover:shadow-skill-card`}
@@ -44,7 +45,11 @@ const Header = () => {
             <div className={barsStyle}></div>
             <div className={barsStyle}></div>
         </button>
-      <ul className={`md:flex md:flex-row md:relative md:top-0 md:border-0 md:right-0 md:p-0 md:shadow-none border-2 rounded-sm p-4 border-primary-color list-none ${isMenuOpen ? '' : 'hidden'} flex-col absolute top-[80px] right-[2.25rem] md:w-full text-center bg-bg-color shadow-about`}>
+      <ul className={`md:flex md:flex-row md:relative md:top-0 md:border-0 
+          md:right-0 md:p-0 md:shadow-none border-2 rounded-sm p-4 
+          border-primary-color list-none ${isMenuOpen ? '' : 'hidden'} 
+          flex-col absolute top-[80px] right-[2.25rem] md:w-full text-center 
+          bg-bg-color dark:bg-slate-900 shadow-about`}>
         <li className="mr-[20px]">
           <a
           className={anchorStyle}
@@ -89,6 +94,9 @@ const Header = () => {
         >
           Contact
         </a>
+        </li>
+        <li className="mr-[20px]">
+          <ModeToggle/>
         </li>
       </ul>
       </nav>
