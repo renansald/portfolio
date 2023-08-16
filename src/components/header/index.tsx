@@ -48,7 +48,7 @@ const Header = () => {
       <ul className={`md:flex md:flex-row md:relative md:top-0 md:border-0 
           md:right-0 md:p-0 md:shadow-none border-2 rounded-sm p-4 
           border-primary-color list-none ${isMenuOpen ? '' : 'hidden'} 
-          flex-col absolute top-[80px] right-[2.25rem] md:w-full text-center 
+          flex-col absolute top-[64px] right-[1.75rem] md:w-full text-center 
           bg-bg-color dark:bg-slate-900 shadow-about`}>
         <li className="mr-[20px]">
           <a
