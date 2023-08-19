@@ -43,7 +43,7 @@ const Skills = (props: Props) => {
         }}
       >
         <h2 className='text-black font-bold dark:text-white'>
-          Back End
+          Backend
         </h2>
         <div 
           className={classIconCard}
@@ -80,7 +80,7 @@ const Skills = (props: Props) => {
         }}
       >
         <h2 className='text-black font-bold dark:text-white'>
-          Front End
+          Frontend
         </h2>
         <div 
           className={classIconCard}
